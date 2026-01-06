@@ -14,18 +14,18 @@ This project implements P-t-E (plan-then-execute) concept:
 	- Decide which metrics, segments, and checks are required
 	- Output a strict, machine-readable plan (JSON)
 	2.	Execute (Deterministic)
-	•	Run only allow-listed analytical tools
-	•	Compute KPIs, deltas, funnels, and segment impacts
-	•	Produce verifiable evidence (no hallucinations)
+	-	Run only allow-listed analytical tools
+	-	Compute KPIs, deltas, funnels, and segment impacts
+	-	Produce verifiable evidence (no hallucinations)
 	3.	Narrate (LLM)
-	•	Convert structured evidence into a clear executive summary
-	•	Explain what changed, why it changed, and what to do next
-	•	Must quote evidence, never invent numbers
+	-	Convert structured evidence into a clear executive summary
+	-	Explain what changed, why it changed, and what to do next
+	-	Must quote evidence, never invent numbers
 
 This separation ensures:
-	•	transparency
-	•	reproducibility
-	•	business trust in AI-assisted analysis
+	-	transparency
+	-	reproducibility
+	-	business trust in AI-assisted analysis
   
 ## Project summary (what this app does)
 
@@ -35,30 +35,30 @@ The result is not just numbers, but actionable business insight.
 ### Applied example (CVR drop)
 
 Using a sample e-commerce dataset, the system:
-	•	Identifies a week-over-week drop in conversion rate (CVR)
-	•	Separates traffic effects from conversion efficiency
-	•	Detects a funnel issue between add-to-cart and checkout
-	•	Shows how the drop differs by:
-	•	device (mobile vs desktop)
-	•	channel (paid search, organic, email, paid social)
-	•	country (US, DE, UK)
+	-	Identifies a week-over-week drop in conversion rate (CVR)
+	-	Separates traffic effects from conversion efficiency
+	-	Detects a funnel issue between add-to-cart and checkout
+	-	Shows how the drop differs by:
+	-	device (mobile vs desktop)
+	-	channel (paid search, organic, email, paid social)
+	-	country (US, DE, UK)
 
 ### How P-t-E is applied here
 	**Planner (LLM)**. Generates hypotheses such as:
-	•	traffic volume change
-	•	CVR change
-	•	funnel step degradation
-	•	segment mix shift
+	-	traffic volume change
+	-	CVR change
+	-	funnel step degradation
+	-	segment mix shift
 	**Executor (Python / pandas)**. Computes:
-	•	KPI deltas (sessions, conversions, CVR)
-	•	funnel conversion rates
-	•	segment-level impacts
+	-	KPI deltas (sessions, conversions, CVR)
+	-	funnel conversion rates
+	-	segment-level impacts
 	**Narrator (LLM)**. Produces a structured executive summary with:
-	•	overall performance
-	•	primary drivers
-	•	segment insights
-	•	confidence level
-	•	recommended next checks
+	-	overall performance
+	-	primary drivers
+	-	segment insights
+	-	confidence level
+	-	recommended next checks
 
 
 
@@ -69,7 +69,7 @@ Using a sample e-commerce dataset, the system:
 
 ## Use Case with Web UI (Streamlit)
 <p align="center">
-  <img src="assets/use_case.png" alt="Use Case" width="720">
+  <img src="assets/use_case.png" alt="Use Case">
 </p>
 
 ## License
