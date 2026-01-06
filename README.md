@@ -44,21 +44,26 @@ Using a sample e-commerce dataset, the system:
 	-	country (US, DE, UK)
 
 ### How P-t-E is applied here
-	**Planner (LLM)**. Generates hypotheses such as:
-	-	traffic volume change
-	-	CVR change
-	-	funnel step degradation
-	-	segment mix shift
-	**Executor (Python / pandas)**. Computes:
-	-	KPI deltas (sessions, conversions, CVR)
-	-	funnel conversion rates
-	-	segment-level impacts
-	**Narrator (LLM)**. Produces a structured executive summary with:
-	-	overall performance
-	-	primary drivers
-	-	segment insights
-	-	confidence level
-	-	recommended next checks
+**Planner (LLM)** — Generates hypotheses such as:
+
+- traffic volume change
+- CVR change
+- funnel step degradation
+- segment mix shift
+
+**Executor (Python / pandas)** — Computes:
+
+- KPI deltas (sessions, conversions, CVR)
+- funnel conversion rates
+- segment-level impacts
+
+**Narrator (LLM)** — Produces a structured executive summary with:
+
+- overall performance
+- primary drivers
+- segment insights
+- confidence level
+- recommended next checks
 
 
 
