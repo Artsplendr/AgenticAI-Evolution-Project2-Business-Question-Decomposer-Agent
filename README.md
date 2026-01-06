@@ -1,26 +1,31 @@
 # Business Question Decomposer (Plan → Execute → Explain)
 
 ## Overview
+
 This project is the second installment in the AgenticAI Evolution series.
-	- Project 1 focused on a fully deterministic pipeline for answering analytics questions.
-	- Project 2 (this repo) introduces LLMs as agents — specifically a Planner and a Narrator — while keeping execution and evidence strictly deterministic.
+
+- Project 1: focused on a fully deterministic pipeline for answering analytics questions.
+- Project 2 (this repo): introduces LLMs as agents — specifically a Planner and a Narrator — while keeping execution and evidence strictly deterministic.
 
 The goal is to combine the reasoning flexibility of LLMs with the reliability and auditability of classic analytics pipelines.
 
-This project implements P-t-E (plan-then-execute) concept:
-	1.	Plan (LLM)
-	- Interpret a vague business question
-	- Propose hypotheses
-	- Decide which metrics, segments, and checks are required
-	- Output a strict, machine-readable plan (JSON)
-	2.	Execute (Deterministic)
-	-	Run only allow-listed analytical tools
-	-	Compute KPIs, deltas, funnels, and segment impacts
-	-	Produce verifiable evidence (no hallucinations)
-	3.	Narrate (LLM)
-	-	Convert structured evidence into a clear executive summary
-	-	Explain what changed, why it changed, and what to do next
-	-	Must quote evidence, never invent numbers
+This project implements the P→t→E (plan‑then‑execute) concept:
+
+1. **Plan (LLM)**
+   - Interpret a vague business question
+   - Propose hypotheses
+   - Decide which metrics, segments, and checks are required
+   - Output a strict, machine‑readable plan (JSON)
+
+2. **Execute (Deterministic)**
+   - Run only allow‑listed analytical tools
+   - Compute KPIs, deltas, funnels, and segment impacts
+   - Produce verifiable evidence (no hallucinations)
+
+3. **Narrate (LLM)**
+   - Convert structured evidence into a clear executive summary
+   - Explain what changed, why it changed, and what to do next
+   - Must quote evidence; never invent numbers
 
 This separation ensures:
 	-	transparency
