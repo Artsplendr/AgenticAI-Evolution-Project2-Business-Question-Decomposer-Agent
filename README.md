@@ -1,41 +1,71 @@
-# Business Question Decomposer (Plan → Execute → Narrative Summary)
+# Business Question Decomposer (Plan → Execute → Explain)
 
-Ask a business question like:
-- "Why did conversion drop last week?"
+## Overview
+This project is the second installment in the AgenticAI Evolution series.
+	•	Project 1 focused on a fully deterministic pipeline for answering analytics questions.
+	•	Project 2 (this repo) introduces LLMs as agents — specifically a Planner and a Narrator — while keeping execution and evidence strictly deterministic.
 
-Pipeline:
-1) Planner (LLM) outputs JSON Plan (fallback rule-plan)
-2) Deterministic tools compute evidence (pandas)
-3) Narrator (LLM) writes a grounded executive summary
+The goal is to combine the reasoning flexibility of LLMs with the reliability and auditability of classic analytics pipelines.
 
-## Setup
-```bash
-python3.11 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-# create a .env file and add your secrets (at minimum OPENAI_API_KEY)
-echo "OPENAI_API_KEY=" >> .env
-```
+This project implements P-t-E (plan-then-execute) concept:
+	1.	Plan (LLM)
+	•	Interpret a vague business question
+	•	Propose hypotheses
+	•	Decide which metrics, segments, and checks are required
+	•	Output a strict, machine-readable plan (JSON)
+	2.	Execute (Deterministic)
+	•	Run only allow-listed analytical tools
+	•	Compute KPIs, deltas, funnels, and segment impacts
+	•	Produce verifiable evidence (no hallucinations)
+	3.	Narrate (LLM)
+	•	Convert structured evidence into a clear executive summary
+	•	Explain what changed, why it changed, and what to do next
+	•	Must quote evidence, never invent numbers
 
-## Venv quick commands (macOS/Linux)
-```bash
-# activate (from project root)
-source .venv/bin/activate
+This separation ensures:
+	•	transparency
+	•	reproducibility
+	•	business trust in AI-assisted analysis
+  
+## Project summary (what this app does)
 
-# deactivate
-deactivate
+This project answers business questions such as: “Why did conversion drop last week?”
 
-# confirm you're in the venv
-which python
-which pip
+### Applied example (CVR drop)
 
-# upgrade packaging tools
-python -m pip install --upgrade pip setuptools wheel
+Using a sample e-commerce dataset, the system:
+	•	Identifies a week-over-week drop in conversion rate (CVR)
+	•	Separates traffic effects from conversion efficiency
+	•	Detects a funnel issue between add-to-cart and checkout
+	•	Shows how the drop differs by:
+	•	device (mobile vs desktop)
+	•	channel (paid search, organic, email, paid social)
+	•	country (US, DE, UK)
 
-# reinstall from requirements
-python -m pip install -r requirements.txt
+### How P-t-E is applied here
+	#### Planner (LLM). Generates hypotheses such as:
+	•	traffic volume change
+	•	CVR change
+	•	funnel step degradation
+	•	segment mix shift
+	#### Executor (Python / pandas). Computes:
+	•	KPI deltas (sessions, conversions, CVR)
+	•	funnel conversion rates
+	•	segment-level impacts
+	#### Narrator (LLM). Produces a structured executive summary with:
+	•	overall performance
+	•	primary drivers
+	•	segment insights
+	•	confidence level
+	•	recommended next checks
 
-# recreate venv with Python 3.11 (if needed)
-python3.11 -m venv .venv
-source .venv/bin/activate
-```
+The result is not just numbers, but actionable business insight.
+
+## Project Layout
+
+
+## Use Case with Web UI (Streamlit)
+
+
+## License
+#### MIT
