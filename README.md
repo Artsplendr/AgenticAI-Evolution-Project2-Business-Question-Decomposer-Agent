@@ -79,7 +79,7 @@ Using a sample e-commerce dataset, the system:
 
 ## Use Case with Web UI (Streamlit)
 <p align="center">
-  <img src="assets/use_case.png" alt="Use Case" width="1600">
+  <img src="assets/use_case.png" alt="Use Case" width="1914">
 </p>
 
 ## License
