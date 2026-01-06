@@ -79,7 +79,7 @@ Using a sample e-commerce dataset, the system:
 ## How to implement this project locally
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/Artsplendr/AgenticAI-Evolution-Project2-Business-Question-Decomposer-Agent.git
 cd business-question-decomposer-agent
 
 # Create and activate a Python 3.11 virtual environment
