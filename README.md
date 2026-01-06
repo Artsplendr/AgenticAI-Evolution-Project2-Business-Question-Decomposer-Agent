@@ -9,7 +9,7 @@ This project is the second installment in the AgenticAI Evolution series.
 
 The goal is to combine the reasoning flexibility of LLMs with the reliability and auditability of classic analytics pipelines.
 
-This project implements the P→t→E (plan‑then‑execute) concept:
+This project implements the **P→t→E** (plan‑then‑execute) concept:
 
 1. **Plan (LLM)**
    - Interpret a vague business question
@@ -49,6 +49,7 @@ Using a sample e-commerce dataset, the system:
 -	country (US, DE, UK)
 
 ### How P→t→E is applied here
+
 **Planner (LLM)** — Generates hypotheses such as:
 
 - traffic volume change
@@ -70,12 +71,31 @@ Using a sample e-commerce dataset, the system:
 - confidence level
 - recommended next checks
 
-
-
 ## Project Layout
 <p align="center">
   <img src="assets/project_layout.png" alt="Project layout" width="720">
 </p>
+
+## How to implement this project locally
+```bash
+# Clone the repository
+git clone <your-repo-url>
+cd business-question-decomposer-agent
+
+# Create and activate a Python 3.11 virtual environment
+python3.11 -m venv .venv
+source .venv/bin/activate   # macOS / Linux
+# .venv\Scripts\activate    # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Create environment file and add your OpenAI API key
+touch .env
+echo "OPENAI_API_KEY=your_api_key_here" >> .env
+
+# Run the Streamlit web application
+streamlit run streamlit_app.py
 
 ## Use Case with Web UI (Streamlit)
 <p align="center">
