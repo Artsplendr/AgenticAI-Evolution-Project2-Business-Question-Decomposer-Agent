@@ -95,7 +95,7 @@ touch .env
 echo "OPENAI_API_KEY=your_api_key_here" >> .env
 
 # Run the Streamlit web application
-streamlit run streamlit_app.py
+streamlit run streamlit_app.py```
 
 ## Use Case with Web UI (Streamlit)
 <p align="center">
