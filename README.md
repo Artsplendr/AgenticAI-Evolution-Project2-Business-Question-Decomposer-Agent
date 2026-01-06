@@ -48,7 +48,7 @@ Using a sample e-commerce dataset, the system:
 -	channel (paid search, organic, email, paid social)
 -	country (US, DE, UK)
 
-### How P-t-E is applied here
+### How P→t→E is applied here
 **Planner (LLM)** — Generates hypotheses such as:
 
 - traffic volume change
@@ -79,7 +79,7 @@ Using a sample e-commerce dataset, the system:
 
 ## Use Case with Web UI (Streamlit)
 <p align="center">
-  <img src="assets/use_case.png" alt="Use Case" width="1440">
+  <img src="assets/use_case.png" alt="Use Case" width="1600">
 </p>
 
 ## License
