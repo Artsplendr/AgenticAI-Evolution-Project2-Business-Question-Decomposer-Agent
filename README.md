@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is the second installment in the AgenticAI Evolution series.
+This project is the second installment in the AgenticAI journey.
 
 - Project 1: focused on a fully deterministic pipeline for answering analytics questions.
 - Project 2 (this repo): introduces LLMs as agents — specifically a Planner and a Narrator — while keeping execution and evidence strictly deterministic.
